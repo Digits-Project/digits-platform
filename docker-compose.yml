@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./digits-proxy/nginx.conf:/etc/nginx/conf.d/digits.conf
+      - ./digits-proxy/nginx.conf:/etc/nginx/conf.d/pgh-digits-pub.conf
 
   pgh-digits-pub:
     build: ./pgh-digits-pub
