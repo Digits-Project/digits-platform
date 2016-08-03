@@ -38,4 +38,10 @@ Starting digit-0
 Attaching to pgh-digits-pub, digits-proxy, digit-0
 ```
 
-Now visit [http://pgh.digits.pub/](http://pgh.digits.pub/) it should load up the PGH Digits websites (such that it is). Until you hit ctrl-c the whole docker platform will be running on your local computer! 
+Now visit [http://pgh.digits.pub/](http://pgh.digits.pub/) it should load up the PGH Digits websites (such that it is). What you are seeing is the contents of `pgh-digits-pub/website` being served up by the webserver running in the `pgh-digits-pub` webserver. Now visit [http://pgh.digits.pub/0](http://pgh.digits.pub/0), you should see a little text blurb that is from `digits/0/index.html`. The proxy is set up to re-direct all requests to pgh.digits.pub/0 to the webserver running in the `digits-0` container.
+
+
+ The Digits-Platform will continue to run until you hit ctrl-c and run:
+ ```
+ docker-compose stop
+ ```
