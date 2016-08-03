@@ -1,0 +1,17 @@
+version: '2'
+services:
+  digits-proxy:
+    image: nginx
+    container_name: digits-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./digits-proxy/nginx.conf:/etc/nginx/conf.d/digits.conf
+
+  pgh-digits-pub:
+    build: ./pgh-digits-pub
+    container_name: pgh-digits-pub
+
+  digit-0:
+    build: ./digits/0
+    container_name: digit-0
